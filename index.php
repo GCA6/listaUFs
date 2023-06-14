@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&family=Arapey&display=swap" <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Arapey&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
     <title>ListaUFs</title>
 </head>
 <body>
@@ -438,11 +442,27 @@
                 'Expectativa de vida (2016)' => '73,4 anos' 
             )
 
-        ]
+        ];
+
+
+        echo '<table>';
+        echo '<tr><th>Estado</th><th>Unidade Federativa</th><th>Sede de Governo</th><th>Área(km²)</th><th>População (2014)</th><th>Densidade (2005)</th><th>PIB (2015)</th><th>% total (2015)</th><th>PIB per capita (R$) (2015)</th><th>IDH (2010)</th><th>Alfabetização (2016)</th><th>Mortalidade Infantil (2016)</th><th>Expectativa de vida (2016)</th></tr>';
+        
+        foreach ($estados as $sigla => $informacoes) {
+            echo '<tr>';
+            echo '<td>' . $sigla . '</td>';
+            foreach ($informacoes as $valor) {
+                echo '<td>' . $valor . '</td>';
+            }
+            echo '</tr>';
+        }
+        
+        echo '</table>';
         ?>
-    </main>
-    <footer>
-        <p>&copy;2023 - Giovanna Cordeiro</p>
-    </footer>
-</body>
-</html>
+          ?>
+            </main>
+            <footer>
+                <p>&copy;2023 - Giovanna Cordeiro</p>
+            </footer>
+        </body>
+        </html>
